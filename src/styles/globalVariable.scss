@@ -1,0 +1,36 @@
+$font-size-txts: 24px;
+
+// 颜色编码
+$c100: #fff;
+$c101: #000;
+$c121: #212121;
+$wd-primary: #5cb3cc;
+
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// position居中
+@mixin positionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+// flex布局 默认居中
+@mixin flexLayout($center1: center, $center2: center) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: $center1; // flex-start | flex-end | center | space-between | space-around
+  align-items: $center2; // flex-start | flex-end | center | baseline | stretch
+}
